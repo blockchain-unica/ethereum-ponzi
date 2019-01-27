@@ -1,0 +1,437 @@
+BestBamkWithInterest.sol-    function deposit() payable {
+BestBamkWithInterest.sol-        //
+BestBamkWithInterest.sol:        if (msg.value < minimum_deposit_amount) throw; // minimum deposit is at least minimum_payment.
+BestBamkWithInterest.sol-        //
+BestBamkWithInterest.sol-        // no fee for first payment (if the customers's balance is 0)
+--
+BetOnHashV81.sol-
+BetOnHashV81.sol-    //payments below bet amount are considered as donation for the winner pool
+BetOnHashV81.sol:    if(msg.value < betAmount) {
+BetOnHashV81.sol-      winPool += msg.value; 
+BetOnHashV81.sol-      return;
+--
+CopyPaste.sol-  
+CopyPaste.sol-  function enter() {
+CopyPaste.sol:    if (msg.value < 1/100 ether) {
+CopyPaste.sol-        msg.sender.send(msg.value);
+CopyPaste.sol-        return;
+--
+DepositHolder2.sol-    function deposit(bytes16[] values, uint64 deposit) owner_only {
+DepositHolder2.sol-        uint required = values.length * deposit;
+DepositHolder2.sol:        if(msg.value < required) {
+DepositHolder2.sol-            throw;
+DepositHolder2.sol-        } else if(msg.value > required) {
+--
+DepositHolder.sol-    function deposit(bytes16[] values, uint64 deposit) owner_only {
+DepositHolder.sol-        uint required = values.length * deposit;
+DepositHolder.sol:        if(msg.value < required) {
+DepositHolder.sol-            throw;
+DepositHolder.sol-        } else if(msg.value > required) {
+--
+DFS.sol-
+DFS.sol-        /* minimum amount is 3 ether, plan must be 1, 2 or 3 */
+DFS.sol:        if (msg.value < 3 ether || (plan != 1 && plan !=2 && plan !=3)) {
+DFS.sol-            throw;
+DFS.sol-        }
+--
+Diana.sol-  
+Diana.sol-  function enter() {
+Diana.sol:    if (msg.value < 10 finney) {
+Diana.sol-        msg.sender.send(msg.value);
+Diana.sol-        return;
+--
+Doubler2.sol-    
+Doubler2.sol-    function enter() {
+Doubler2.sol:        if (msg.value < 1 ether) {
+Doubler2.sol-            msg.sender.send(msg.value);
+Doubler2.sol-            return;
+--
+Doubler.sol-    
+Doubler.sol-    function enter() {
+Doubler.sol:        if (msg.value < 1 ether) {
+Doubler.sol-            msg.sender.send(msg.value);
+Doubler.sol-            return;
+--
+DoubleYour5.sol-  
+DoubleYour5.sol-  function enter() {
+DoubleYour5.sol:    if (msg.value < 1/100 ether) {
+DoubleYour5.sol-        msg.sender.send(msg.value);
+DoubleYour5.sol-        return;
+--
+DynamicPyramid.sol-    function init() private{
+DynamicPyramid.sol-        //Ensures only tx with value of 1 ether or greater are processed and added to pyramid
+DynamicPyramid.sol:        if (msg.value < 1 ether) {
+DynamicPyramid.sol-            collectedFees += msg.value;
+DynamicPyramid.sol-            return;
+--
+DynamicPyramid.sol~-    function init() private{
+DynamicPyramid.sol~-        //Ensures only tx with value of 1 ether or greater are processed and added to pyramid
+DynamicPyramid.sol~:        if (msg.value < 1 ether) {
+DynamicPyramid.sol~-            collectedFees += msg.value;
+DynamicPyramid.sol~-            return;
+--
+Ethereum-x2.0.sol-  
+Ethereum-x2.0.sol-  function enter() {
+Ethereum-x2.0.sol:    if (msg.value < 10 finney) {
+Ethereum-x2.0.sol-        msg.sender.send(msg.value);
+Ethereum-x2.0.sol-        return;
+--
+Ethstick.sol-    function init() private{
+Ethstick.sol-        //Only deposits >0.1ETH are allowed to join
+Ethstick.sol:        if (msg.value < 100 finney) {
+Ethstick.sol-            msg.sender.send(msg.value);
+Ethstick.sol-            return;
+--
+EthVentures1.sol-//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVentures1.sol-//IN LESS THAN 2 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 2 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVentures1.sol:if (msg.value < 2 ether)
+EthVentures1.sol-{
+EthVentures1.sol-uint PRE_inv_length = investors.length;
+--
+EthVentures2.sol-	//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVentures2.sol-	//IN LESS THAN 5 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 5 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVentures2.sol:	if (msg.value < 5 ether) 
+EthVentures2.sol-	{ 
+EthVentures2.sol-	
+--
+EthVentures3.sol-//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVentures3.sol-//IN LESS THAN 2 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 2 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVentures3.sol:if (msg.value < 2 ether)
+EthVentures3.sol-{
+EthVentures3.sol-uint PRE_inv_length = investors.length;
+--
+EthVentures4.sol-//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVentures4.sol-//IN LESS THAN 2 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 2 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVentures4.sol:if (msg.value < 2 ether)
+EthVentures4.sol-{
+EthVentures4.sol-uint PRE_payout;
+--
+EthVenturesFinal1.sol-//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVenturesFinal1.sol-//IN LESS THAN 2 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 2 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVenturesFinal1.sol:if (msg.value < 2 ether)
+EthVenturesFinal1.sol-{
+EthVenturesFinal1.sol-uint PRE_payout;
+--
+EthVenturesFinal2.sol-//DIVIDEND PAYOUT FUNCTION, IT WILL GET INCOME FROM OTHER CONTRACTS, THE DIVIDENDS WILL ALWAYS BE SENT
+EthVenturesFinal2.sol-//IN LESS THAN 2 ETHER SIZE PACKETS, BECAUSE ANY DEPOSIT OVER 2 ETHER GETS REGISTERED AS AN INVESTOR!!!
+EthVenturesFinal2.sol:if (msg.value < 2 ether)
+EthVenturesFinal2.sol-{
+EthVenturesFinal2.sol-uint PRE_payout;
+--
+FairAndEasy2.sol-  
+FairAndEasy2.sol-  function enter() {
+FairAndEasy2.sol:    if (msg.value < 1/100 ether) {
+FairAndEasy2.sol-        msg.sender.send(msg.value);
+FairAndEasy2.sol-        return;
+--
+FairAndEasy.sol-  
+FairAndEasy.sol-  function enter() {
+FairAndEasy.sol:    if (msg.value < 1/100 ether) {
+FairAndEasy.sol-        msg.sender.send(msg.value);
+FairAndEasy.sol-        return;
+--
+FirePonzi.sol-  }
+FirePonzi.sol-  function enter() {
+FirePonzi.sol:    if (msg.value < 100 finney) { // Only  > 0.1 Eth depoits
+FirePonzi.sol-        msg.sender.send(msg.value);
+FirePonzi.sol-        return;
+--
+FivePerCent.sol-	{
+FivePerCent.sol-	        //Ensures only tx with value between min. 10 finney (0.01 ether) and max. 10 ether are processed 
+FivePerCent.sol:    		if (msg.value < 10 finney) 
+FivePerCent.sol-		{
+FivePerCent.sol-        		msg.sender.send(msg.value);
+--
+FiveTimes.sol-  
+FiveTimes.sol-  function enter() {
+FiveTimes.sol:    if (msg.value < 1/100 ether) {
+FiveTimes.sol-        msg.sender.send(msg.value);
+FiveTimes.sol-        return;
+--
+Fresh.sol-  
+Fresh.sol-  function enter() {
+Fresh.sol:    if (msg.value < 1 ether) {
+Fresh.sol-        msg.sender.send(msg.value);
+Fresh.sol-        return;
+--
+GoodFellas.sol-  
+GoodFellas.sol-  function enter() {
+GoodFellas.sol:    if (msg.value < 1/100 ether) {
+GoodFellas.sol-        msg.sender.send(msg.value);
+GoodFellas.sol-        return;
+--
+GreedPit.sol-    function init() private{
+GreedPit.sol-        //Only deposits >0.1ETH are allowed to join
+GreedPit.sol:        if (msg.value < 100 finney) {
+GreedPit.sol-            return;
+GreedPit.sol-        }
+--
+GreedPit.sol-            
+GreedPit.sol-        //Add new entry to the entries array    
+GreedPit.sol:        if (msg.value < 50 ether)
+GreedPit.sol-            entries.push(Entry(msg.sender, msg.value, (msg.value * (finalMultiplier) / 100), tokensUsed));
+GreedPit.sol-        else
+--
+GreedPit.sol-
+GreedPit.sol-        //Trigger jump event
+GreedPit.sol:        if (msg.value < 50 ether)
+GreedPit.sol-            Jump(msg.sender, msg.value, (msg.value * (finalMultiplier) / 100));
+GreedPit.sol-        else
+--
+Kardashian.sol-  
+Kardashian.sol-  function enter() {
+Kardashian.sol:    if (msg.value < 10 finney) {
+Kardashian.sol-        msg.sender.send(msg.value);
+Kardashian.sol-        return;
+--
+LittleCactus.sol-  
+LittleCactus.sol-  function enter() {
+LittleCactus.sol:    if (msg.value < 1/100 ether) {
+LittleCactus.sol-        msg.sender.send(msg.value);
+LittleCactus.sol-        return;
+--
+LuckyDoubler.sol-    function init() private{
+LuckyDoubler.sol-        
+LuckyDoubler.sol:        if (msg.value < 1 ether) {
+LuckyDoubler.sol-             msg.sender.send(msg.value);
+LuckyDoubler.sol-            return;
+--
+Matthew.sol-            
+Matthew.sol-        }else{ // top the stake
+Matthew.sol:            if (msg.value < stake + DELTA) throw; // you must rise the stake by Delta
+Matthew.sol-            bool isOtherSuccess = msg.sender.send(stake); // give back the old stake
+Matthew.sol-            setFacts(); //reset the game
+--
+NanoPyramid2.sol-    function enter() {
+NanoPyramid2.sol-        // Check if amount is too small
+NanoPyramid2.sol:        if (msg.value < minAmount) {
+NanoPyramid2.sol-            // Amount is too small, no need to think about refund
+NanoPyramid2.sol-            collectedFees += msg.value;
+--
+NanoPyramid.sol-    function enter() {
+NanoPyramid.sol-        // Check if amount is too small
+NanoPyramid.sol:        if (msg.value < minAmount) {
+NanoPyramid.sol-            // Amount is too small, no need to think about refund
+NanoPyramid.sol-            collectedFees += msg.value;
+--
+NewPonzi.sol-  
+NewPonzi.sol-  function enter() {
+NewPonzi.sol:    if (msg.value < 1/100 ether) {
+NewPonzi.sol-        msg.sender.send(msg.value);
+NewPonzi.sol-        return;
+--
+NiceGuyPonzi2.sol-  
+NiceGuyPonzi2.sol-  function enter() {
+NiceGuyPonzi2.sol:    if (msg.value < 1/100 ether) {
+NiceGuyPonzi2.sol-        msg.sender.send(msg.value);
+NiceGuyPonzi2.sol-        return;
+--
+NoFeePonzi.sol-
+NoFeePonzi.sol-  function() {
+NoFeePonzi.sol:    if ((msg.value < MIN_VALUE) || (msg.value > MAX_VALUE)) {
+NoFeePonzi.sol-      throw;
+NoFeePonzi.sol-    }
+--
+NotAnotherPonzi.sol-  
+NotAnotherPonzi.sol-  function enter() {
+NotAnotherPonzi.sol:    if (msg.value < 1/100 ether) {
+NotAnotherPonzi.sol-        msg.sender.send(msg.value);
+NotAnotherPonzi.sol-        return;
+--
+PiggyBank2.sol-  
+PiggyBank2.sol-  function enter() {
+PiggyBank2.sol:    if (msg.value < 50 finney) {
+PiggyBank2.sol-        msg.sender.send(msg.value);
+PiggyBank2.sol-        return;
+--
+PiggyBank.sol-  
+PiggyBank.sol-  function enter() {
+PiggyBank.sol:    if (msg.value < 50 finney) {
+PiggyBank.sol-        msg.sender.send(msg.value);
+PiggyBank.sol-        return;
+--
+Plusoneponzi1.sol-
+Plusoneponzi1.sol-  function() {
+Plusoneponzi1.sol:    if (msg.value < VALUE) {
+Plusoneponzi1.sol-      throw;
+Plusoneponzi1.sol-    }
+--
+Plusoneponzi2.sol-
+Plusoneponzi2.sol-  function() {
+Plusoneponzi2.sol:    if (msg.value < VALUE) {
+Plusoneponzi2.sol-      throw;
+Plusoneponzi2.sol-    }
+--
+Plusoneponzi3.sol-
+Plusoneponzi3.sol-  function() {
+Plusoneponzi3.sol:    if (msg.value < VALUE) {
+Plusoneponzi3.sol-      throw;
+Plusoneponzi3.sol-    }
+--
+Pyramid.sol-
+Pyramid.sol-    function enter(bytes desc, bytes bitcoinAddress) {
+Pyramid.sol:        if (msg.value < 1 ether) {
+Pyramid.sol-            msg.sender.send(msg.value);
+Pyramid.sol-            return;
+--
+Quadrupler.sol-  
+Quadrupler.sol-  function enter() {
+Quadrupler.sol:    if (msg.value < 1 ether) {
+Quadrupler.sol-        msg.sender.send(msg.value);
+Quadrupler.sol-        return;
+--
+Quick2.sol-  
+Quick2.sol-  function enter() {
+Quick2.sol:    if (msg.value < 1/100 ether) {
+Quick2.sol-        msg.sender.send(msg.value);
+Quick2.sol-        return;
+--
+Quick.sol-  
+Quick.sol-  function enter() {
+Quick.sol:    if (msg.value < 1 ether) {
+Quick.sol-        msg.sender.send(msg.value);
+Quick.sol-        return;
+--
+RobinHoodPonzi.sol-
+RobinHoodPonzi.sol-  function enter() private {
+RobinHoodPonzi.sol:    if (msg.value < 1 finney) {
+RobinHoodPonzi.sol-        msg.sender.send(msg.value);
+RobinHoodPonzi.sol-        return;
+--
+Rubixi.sol-        function init() private {
+Rubixi.sol-                //Ensures only tx with value of 1 ether or greater are processed and added to pyramid
+Rubixi.sol:                if (msg.value < 1 ether) {
+Rubixi.sol-                        collectedFees += msg.value;
+Rubixi.sol-                        return;
+--
+Send1Get2.sol-  
+Send1Get2.sol-  function enter() {
+Send1Get2.sol:    if (msg.value < 1 ether) {
+Send1Get2.sol-        msg.sender.send(msg.value);
+Send1Get2.sol-        return;
+--
+SmallPonzi2.sol-  
+SmallPonzi2.sol-  function enter() {
+SmallPonzi2.sol:    if (msg.value < 1/100 ether) {
+SmallPonzi2.sol-        msg.sender.send(msg.value);
+SmallPonzi2.sol-        return;
+--
+SmallPonzi.sol-  
+SmallPonzi.sol-  function enter() {
+SmallPonzi.sol:    if (msg.value < 1/100 ether) {
+SmallPonzi.sol-        msg.sender.send(msg.value);
+SmallPonzi.sol-        return;
+--
+SmartRevShare1.sol-  function() {
+SmartRevShare1.sol-    // 100 finey is minimum invest
+SmartRevShare1.sol:    if (msg.value < 1 finney && msg.value > 4 finney) throw;
+SmartRevShare1.sol-
+SmartRevShare1.sol-    invest();
+--
+SmartRevShare2.sol-  function() {
+SmartRevShare2.sol-    // 100 finey is minimum invest
+SmartRevShare2.sol:    if (msg.value < 100 finney) throw;
+SmartRevShare2.sol-
+SmartRevShare2.sol-    invest();
+--
+The10EtherPyramid1.sol-  
+The10EtherPyramid1.sol-  function enter() {
+The10EtherPyramid1.sol:    if (msg.value < 10 ether) {
+The10EtherPyramid1.sol-        msg.sender.send(msg.value);
+The10EtherPyramid1.sol-        return;
+--
+The10EtherPyramid.sol-  
+The10EtherPyramid.sol-  function enter() {
+The10EtherPyramid.sol:    if (msg.value < 10 ether) {
+The10EtherPyramid.sol-        msg.sender.send(msg.value);
+The10EtherPyramid.sol-        return;
+--
+TheRun.sol-        function init() private {
+TheRun.sol-            uint deposit=msg.value;
+TheRun.sol:            if (msg.value < 500 finney) { //only participation with >1 ether accepted
+TheRun.sol-                    msg.sender.send(msg.value);
+TheRun.sol-                    return;
+--
+ThesimpleGame.sol-  
+ThesimpleGame.sol-  function enter() {
+ThesimpleGame.sol:    if (msg.value < 1/100 ether) {
+ThesimpleGame.sol-        msg.sender.send(msg.value);
+ThesimpleGame.sol-        return;
+--
+TheUltimatePyramid1.sol-  
+TheUltimatePyramid1.sol-  function enter() {
+TheUltimatePyramid1.sol:    if (msg.value < 80/100 ether) {
+TheUltimatePyramid1.sol-        msg.sender.send(msg.value);
+TheUltimatePyramid1.sol-        return;
+--
+TheUltimatePyramid2.sol-  
+TheUltimatePyramid2.sol-  function enter() {
+TheUltimatePyramid2.sol:    if (msg.value < 80/100 ether) {
+TheUltimatePyramid2.sol-        msg.sender.send(msg.value);
+TheUltimatePyramid2.sol-        return;
+--
+TheWhaleGame1.sol-  
+TheWhaleGame1.sol-  function enter() {
+TheWhaleGame1.sol:    if (msg.value < 5 ether) {
+TheWhaleGame1.sol-        msg.sender.send(msg.value);
+TheWhaleGame1.sol-        return;
+--
+TheWhaleGame2.sol-  
+TheWhaleGame2.sol-  function enter() {
+TheWhaleGame2.sol:    if (msg.value < 5 ether) {
+TheWhaleGame2.sol-        msg.sender.send(msg.value);
+TheWhaleGame2.sol-        return;
+--
+Timegame1.sol-
+Timegame1.sol-
+Timegame1.sol:     if (msg.value < 1 ether) {
+Timegame1.sol-        msg.sender.send(msg.value);
+Timegame1.sol-        return;
+--
+Timegame2.sol-
+Timegame2.sol-
+Timegame2.sol:     if (msg.value < 1 ether) {
+Timegame2.sol-        msg.sender.send(msg.value);
+Timegame2.sol-        return;
+--
+Timegame3.sol-
+Timegame3.sol-
+Timegame3.sol:     if (msg.value < 1 ether) {
+Timegame3.sol-        msg.sender.send(msg.value);
+Timegame3.sol-        return;
+--
+Tomeka.sol-    function init() private{
+Tomeka.sol-        //Ensures only tx with value of 1 ether or greater are processed and added to pyramid
+Tomeka.sol:        if (msg.value < 1 ether) {
+Tomeka.sol-            collectedFees += msg.value;
+Tomeka.sol-            return;
+--
+TreasureChest.sol-
+TreasureChest.sol-  function enter() {
+TreasureChest.sol:    if (msg.value < 50 finney) {
+TreasureChest.sol-        msg.sender.send(msg.value);
+TreasureChest.sol-        return;
+--
+Triple.sol-  
+Triple.sol-  function enter() {
+Triple.sol:    if (msg.value < 3 ether) {
+Triple.sol-        msg.sender.send(msg.value);
+Triple.sol-        return;
+--
+UfoPonzi.sol-    
+UfoPonzi.sol-    function enter() {
+UfoPonzi.sol:        if (msg.value < 1 ether) {
+UfoPonzi.sol-            msg.sender.send(msg.value);
+UfoPonzi.sol-            return;
+--
+UltimatePyramid.sol-  
+UltimatePyramid.sol-  function enter() {
+UltimatePyramid.sol:    if (msg.value < 80/100 ether) {
+UltimatePyramid.sol-        msg.sender.send(msg.value);
+UltimatePyramid.sol-        return;
+--
+ZeroPonzi.sol-  function() {
+ZeroPonzi.sol-    // we only accept values in range
+ZeroPonzi.sol:    if ((msg.value < MIN_VALUE) || (msg.value > MAX_VALUE)) {
+ZeroPonzi.sol-      throw;
+ZeroPonzi.sol-    }

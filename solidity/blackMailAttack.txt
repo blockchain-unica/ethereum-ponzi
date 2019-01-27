@@ -1,0 +1,54 @@
+**************************************
+Checking send or mixed behaviour: 
+
+BestBamkWithInterest.sol:        if (!msg.sender.send(withdraw_amount)) throw;  // send withdraw amount, but check for error to roll back if needed
+BestBamkWithInterest.sol:        if (!msg.sender.send(interest)) throw;         // send interest amount, but check for error to roll back if needed
+
+NanoPyramid2.sol:            	if (!msg.sender.send(amountToRefund)) {
+NanoPyramid2.sol:            if (!owner.send(collectedFees)) {
+
+NanoPyramid.sol:            	if (!msg.sender.send(amountToRefund)) {
+NanoPyramid.sol:            if (!owner.send(collectedFees)) {
+
+PonzICO.sol:        if (!msg.sender.send(amount)) {
+
+
+DepositHolder2.sol:            if(!msg.sender.send(msg.value - required))
+DepositHolder2.sol:        if(!msg.sender.send(recovered))
+DepositHolder2.sol:        if(!addr.send(amount))
+
+DepositHolder.sol:            if(!msg.sender.send(msg.value - required))
+DepositHolder.sol:        if(!msg.sender.send(recovered))
+DepositHolder.sol:        if(!addr.send(amount))
+
+**************************************
+Checking send and vulnerable to blackmail:
+
+DFS.sol:            if(!msg.sender.send(msg.value - 1000 ether)) {
+DFS.sol:        if(!owner1.send(amount *  5/2 / 100)) {
+DFS.sol:        if(!owner2.send(amount *  5/2 / 100)) {
+DFS.sol:            if(!ref1.send(amount * 5 / 100)) {
+DFS.sol:                if(!ref2.send(amount * 2 / 100)) {
+DFS.sol:                    if(!ref3.send(amount / 100)) {
+DFS.sol:                    if(!deposits[i].sender.send(amountToWithdraw)) {}
+
+HYIP.sol:					if(!m_beneficiaries[idx].send(eachBeneficiaryPayout))
+HYIP.sol:				if(!m_investors[idx].etherAddress.send(payout))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TheFunction.sol:					if(!m_beneficiaries[idx].send(eachBeneficiaryPayout))
+TheFunction.sol:				if(!m_investors[idx].etherAddress.send(payout))
+
