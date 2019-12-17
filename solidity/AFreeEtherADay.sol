@@ -1,4 +1,4 @@
-ragma solidity ^0.4.5;
+pragma solidity ^0.4.5;
 
 contract A_Free_Ether_A_Day { 
 
